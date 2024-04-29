@@ -5,7 +5,7 @@ module Orders
 
     def work(raw_event)
       message = JSON.parse(raw_event)
-      Spree::Rmq::Consumers::Orders::Fulfilled.call(payload: message)
+      Spree::Rmq::Orders::Consumers::Fulfilled.call(payload: message)
       ack!
     end
   end
