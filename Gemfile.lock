@@ -215,6 +215,7 @@ GEM
       activerecord (>= 4.2)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    amq-protocol (2.3.2)
     auto_strip_attributes (2.6.0)
       activerecord (>= 4.0)
     autoprefixer-rails (10.4.16.0)
@@ -236,6 +237,9 @@ GEM
       popper_js (>= 1.16.1, < 2)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    bunny (2.22.0)
+      amq-protocol (~> 2.3, >= 2.3.1)
+      sorted_set (~> 1, >= 1.0.2)
     cancancan (3.5.0)
     canonical-rails (0.2.15)
       actionview (>= 4.1, <= 7.2)
@@ -441,6 +445,7 @@ GEM
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
+    rbtree (0.4.6)
     rdoc (6.6.3.1)
       psych (>= 4.0.0)
     redis (5.1.0)
@@ -475,7 +480,17 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    serverengine (2.0.7)
+      sigdump (~> 0.2.2)
+    set (1.1.0)
+    sigdump (0.2.5)
     simple_po_parser (1.1.6)
+    sneakers (2.11.0)
+      bunny (~> 2.12)
+      concurrent-ruby (~> 1.0)
+      rake
+      serverengine (~> 2.0.5)
+      thor
     solid_cache (0.6.0)
       activejob (>= 7)
       activerecord (>= 7)
@@ -486,6 +501,9 @@ GEM
       concurrent-ruby (~> 1.2.2)
       fugit (~> 1.9.0)
       railties (>= 7.1)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
     spree_extension (0.1.0)
       activerecord (>= 4.2)
       spree_core
@@ -561,6 +579,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bunny
   capybara
   debug
   image_processing (~> 1.2)
@@ -572,6 +591,7 @@ DEPENDENCIES
   redis (>= 4.0.1)
   sassc!
   selenium-webdriver
+  sneakers
   solid_cache
   solid_queue
   spree!
