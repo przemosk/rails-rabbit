@@ -12,7 +12,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # TODO: move into secrects
-  config.amqp_url = 'amqps://trkvtwhf:6sJKDoxdsLar8x8i81F2SnPyPrJLjufS@cow.rmq2.cloudamqp.com/trkvtwhf'
+  config.amqp_url = 'SET_URL'
   # Show full error reports.
   config.consider_all_requests_local = true
 

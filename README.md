@@ -15,6 +15,7 @@ Make sure you have the following installed:
 * Ruby 3.2.2 - [installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
 * Vips - [installation instructions](https://libvips.github.io/libvips/install.html)
 
+Make sure you have setup `ampq_url` value in `config/enviroments` 
 ```bash
 bin/setup
 ```
